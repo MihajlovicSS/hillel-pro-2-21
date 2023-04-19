@@ -38,14 +38,12 @@ class ContactTable{
 
     renderList(list){
         const html = list.map(this.createTableRowWithNewData).join('')
-        // const table = document.querySelector(ContactTable.ID_TABLE)
 
         this.table.insertAdjacentHTML('beforeend', html)
     }
 
     renderListItem(contact){
         const html = this.createTableRowWithNewData(contact)
-        // const table = document.querySelector(ContactTable.ID_TABLE)
 
         this.table.insertAdjacentHTML('beforeend', html)
     }
@@ -81,6 +79,7 @@ class ContactTable{
     replaceContactRow(id, contact){
         const oldContactRow = document.querySelector(`[data-id="${id}"]`)
         const newContactRow = this.createTableRowWithNewData(contact)
+
         oldContactRow.outerHTML = newContactRow
     }
 

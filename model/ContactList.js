@@ -45,11 +45,13 @@ class ContactList{
 
     deleteContact(id) {
         const idInList = this.#contactList.indexOf(this.findListItemByID(id))
+
         this.#contactList.splice(idInList, 1)
     }
 
     editContact(id, newContact) {
         const number = this.#contactList.indexOf(this.findListItemByID(id))
+        
         this.#contactList.splice(number, 1, newContact)
     }
 }

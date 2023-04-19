@@ -54,6 +54,7 @@ class ContactForm{
     editContact(e){
         const target = e.target
         const id = findContactRow(target).dataset.id
+        
         this.fillForm(contactList.findListItemByID(id))
     }
 
